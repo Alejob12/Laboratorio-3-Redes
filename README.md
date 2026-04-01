@@ -65,18 +65,5 @@ gcc -Wall -o subscriber_udp subscriber_udp.c
 ./publisher_udp    # pide tema y mensajes por teclado, 'salir' para terminar
 ```
 
-Nota UDP: si corres dos subscribers en la misma maquina, cambia MY_PORT
-en subscriber_udp.c (ej: 6001, 6002) porque no pueden compartir el mismo puerto.
 
----
 
-## Wireshark
-
-Interfaz: Loopback: lo
-
-```
-Filtro TCP:  tcp.port == 9000
-Filtro UDP:  udp.port == 5000
-```
-
-Guardar como tcp_pubsub.pcap y udp_pubsub.pcap.
